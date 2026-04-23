@@ -15,7 +15,7 @@ ENV PATH=/opt/conda/bin:$PATH
 RUN conda config --system --set channel_priority strict && \
     conda config --system --add channels conda-forge
 
-RUN conda install -y python=3.11 numpy astropy pandas scikit-learn pip && \
+RUN conda install -y python=3.11 numpy astropy pandas scikit-learn pip memory_profiler && \
     conda clean -afy
 
 # ✅ CUDA-enabled PyTorch install that works even when building on a Mac
