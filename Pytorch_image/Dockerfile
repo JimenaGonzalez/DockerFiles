@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir torch torchvision --index-url https://download.py
 
 RUN pip install --no-cache-dir -U albumentations segmentation-models-pytorch
 
-#RUN pip install --no-cache-dir efficientnet_pytorch
+RUN pip install --no-cache-dir efficientnet_pytorch
 
 RUN mkdir -p /.singularity.d/env && \
     echo 'export PATH=/opt/conda/bin:$PATH' >> /.singularity.d/env/91-environment.sh
